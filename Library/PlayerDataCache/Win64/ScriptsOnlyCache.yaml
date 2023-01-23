@@ -84,6 +84,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
+    - Class: 153
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
@@ -1329,7 +1331,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: ef13e287165da0fcd6a113b940585aea
+      Hash: de13daa66e7fecdeae9a7924655f73c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1480,4 +1482,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/jadeb/OneDrive/Bureau/FPS-test.exe
+  playerPath: C:/Users/jadeb/OneDrive/Bureau/build/FPS-test.exe
