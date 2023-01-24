@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4231989157999670277}
   - component: {fileID: 4231989157999670279}
   - component: {fileID: 4231989157999670276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231989158266865866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231989158429865544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,9 +172,9 @@ GameObject:
   - component: {fileID: 159449211967680536}
   - component: {fileID: 7964793201163530318}
   - component: {fileID: 5191486734065014873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +295,8 @@ MonoBehaviour:
   - {fileID: 4231989158514744161}
   - {fileID: 4231989157999670279}
   - {fileID: 4231989157999670276}
+  - {fileID: 5191486734065014873}
+  _remoteLayerName: RemotePlayer
 --- !u!136 &7784694054190485601
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -502,7 +504,7 @@ MonoBehaviour:
   _cam: {fileID: 4231989157999670279}
   _mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 567
 --- !u!1 &4231989158539108895
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +516,7 @@ GameObject:
   - component: {fileID: 4231989158539108894}
   - component: {fileID: 4231989158539108888}
   - component: {fileID: 4231989158539108889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +599,7 @@ GameObject:
   - component: {fileID: 4231989158701264032}
   - component: {fileID: 4231989158701264061}
   - component: {fileID: 4231989158701264034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunModel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231989159022074532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231989159049653056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +745,7 @@ GameObject:
   - component: {fileID: 4231989159084467237}
   - component: {fileID: 4231989159084467238}
   - component: {fileID: 4231989159084467239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +828,7 @@ GameObject:
   - component: {fileID: 4231989159698233166}
   - component: {fileID: 4231989159698233163}
   - component: {fileID: 4231989159698233160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunModel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

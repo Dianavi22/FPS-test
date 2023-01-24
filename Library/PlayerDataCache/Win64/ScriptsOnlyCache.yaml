@@ -4,9 +4,12 @@ ScriptsOnlyBuild:
     - PlayerController
     - PlayerMotor
     - PlayerSetUp
+    - PlayerShoot
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     - Mirror.NetworkTransformReliable
+    Mirror.Editor.dll:
+    - Mirror.NetworkBehaviourInspector
     Mirror.Transports.dll:
     - kcp2k.KcpTransport
     Mirror.dll:
@@ -20,7 +23,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-  serializedClasses: {}
+  serializedClasses:
+    Assembly-CSharp:
+    - PlayerWeapon
   methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -57,25 +62,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3400}
+      Script: {instanceID: 3402}
     - Class: 114
-      Script: {instanceID: 4756}
+      Script: {instanceID: 4758}
     - Class: 114
-      Script: {instanceID: 4882}
+      Script: {instanceID: 4884}
     - Class: 114
-      Script: {instanceID: 5308}
+      Script: {instanceID: 5310}
     - Class: 114
-      Script: {instanceID: 5398}
+      Script: {instanceID: 5400}
     - Class: 114
-      Script: {instanceID: 6486}
+      Script: {instanceID: 5962}
     - Class: 114
-      Script: {instanceID: 7932}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 8058}
+      Script: {instanceID: 7936}
     - Class: 114
-      Script: {instanceID: 8250}
+      Script: {instanceID: 8062}
     - Class: 114
-      Script: {instanceID: 8396}
+      Script: {instanceID: 8254}
+    - Class: 114
+      Script: {instanceID: 8400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -845,7 +852,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 7d1024b97dd7ad76d6f5c985a8891516
+      Hash: 969b42bf4de684fec1c8c896862921ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMotor
@@ -951,6 +958,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 45c1d8ac91a746f8737957fecdddcb45
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerShoot
   - hash:
       serializedVersion: 2
       Hash: d17f8a6c5382f5422b60b87552ec75d1
@@ -1403,7 +1416,7 @@ ScriptsOnlyBuild:
     className: BasicNetManager
   - hash:
       serializedVersion: 2
-      Hash: f451b1a3e3ceff23557c127c2e4f967a
+      Hash: 56ac5f90f7249b41c41a8fcae84b58c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSetUp
