@@ -1,18 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float _maxHealth = 100f;
+    [SyncVar] private float _currentHealth;
+
+    private void Awake()
     {
-        
+        SetDefaults();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDefaults()
     {
-        
+        _currentHealth = _maxHealth;
     }
+
+    public void TakeDamage(float amount)
+    {
+        _currentHealth -= amount;
+    }
+
 }

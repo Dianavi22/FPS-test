@@ -17,4 +17,8 @@ public class GameManager : MonoBehaviour
     {
         _players.Remove(playerId);
     }
+    public static Player GetPlayer(string playerId)
+    {
+        return _players[playerId];
+    }
 }
