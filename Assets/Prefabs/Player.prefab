@@ -210,6 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9a3ec1baac4e2419bd832663611853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  _maxHealth: 100
+  _disableOnDeath:
+  - {fileID: 5191486734065014873}
+  - {fileID: 4231989158514744166}
 --- !u!135 &4231989158514744164
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -512,7 +519,7 @@ MonoBehaviour:
   syncInterval: 0.1
   weapon:
     name: Fusil semi-automatique
-    damage: 10
+    damage: 50
     range: 100
   _cam: {fileID: 4231989157999670279}
   _mask:
