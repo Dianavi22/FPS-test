@@ -829,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4fd449d6fdb7945a9398afa140e62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matchSettings:
+    respawnTimer: 3
 --- !u!1 &1892308344
 GameObject:
   m_ObjectHideFlags: 0

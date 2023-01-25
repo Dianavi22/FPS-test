@@ -2,6 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
 [RequireComponent(typeof(ConfigurableJoint))]
+[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _thrusterForce = 1000f;
 
+    private Animator _animator;
 
     [Header("Joint Options")]
     [SerializeField] private float _jointSpring = 20f;
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         _motor = GetComponent<PlayerMotor>();
         _joint = GetComponent<ConfigurableJoint>();
+        _animator = GetComponent<Animator>();
         SetJoinSettings(_jointSpring);
 
 
@@ -34,13 +37,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Calculer la velocité du mouvement du joueur
-        float xMov = Input.GetAxisRaw("Horizontal");
-        float zMov = Input.GetAxisRaw("Vertical");
+        float xMov = Input.GetAxis("Horizontal");
+        float zMov = Input.GetAxis("Vertical");
 
         Vector3 moveHozirontal = transform.right * xMov;
         Vector3 moveVertical = transform.forward * zMov;
 
-        Vector3 _velocity = (moveHozirontal + moveVertical).normalized * _speed;
+        Vector3 _velocity = (moveHozirontal + moveVertical) * _speed;
+
+        //jouer les animations
+        _animator.SetFloat("ForwardVelocity", zMov);
 
         _motor.Move(_velocity);
         float yRot = Input.GetAxisRaw("Mouse X");

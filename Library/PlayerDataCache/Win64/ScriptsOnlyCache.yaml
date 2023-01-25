@@ -10,8 +10,6 @@ ScriptsOnlyBuild:
     Mirror.Components.dll:
     - Mirror.NetworkTransform
     - Mirror.NetworkTransformReliable
-    Mirror.Editor.dll:
-    - Mirror.NetworkBehaviourInspector
     Mirror.Transports.dll:
     - kcp2k.KcpTransport
     Mirror.dll:
@@ -21,6 +19,15 @@ ScriptsOnlyBuild:
     - Mirror.NetworkStartPosition
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationBlendTree.Node
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -56,9 +63,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -67,29 +80,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3402}
     - Class: 114
-      Script: {instanceID: 4758}
+      Script: {instanceID: 4760}
     - Class: 114
-      Script: {instanceID: 4884}
+      Script: {instanceID: 4886}
     - Class: 114
-      Script: {instanceID: 5310}
+      Script: {instanceID: 5312}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5402}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 5686}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 5966}
     - Class: 114
-      Script: {instanceID: 7936}
+      Script: {instanceID: 6494}
     - Class: 114
-      Script: {instanceID: 8062}
+      Script: {instanceID: 6820}
     - Class: 114
-      Script: {instanceID: 8254}
+      Script: {instanceID: 7942}
     - Class: 114
-      Script: {instanceID: 8400}
+      Script: {instanceID: 8068}
     - Class: 114
-      Script: {instanceID: 26292}
+      Script: {instanceID: 8260}
     - Class: 114
-      Script: {instanceID: 26296}
+      Script: {instanceID: 8406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -919,6 +932,12 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
+      Hash: a4fd57555ff56f29a1c797695658680a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: e684da0450fc879b2dc96948e058021d
     assemblyName: Mirror.Authenticators.dll
     namespaceName: Mirror.Authenticators
@@ -1103,6 +1122,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Pong
     className: NetworkManagerPong
+  - hash:
+      serializedVersion: 2
+      Hash: 9fcea810d49ccf02f21553c9d0eb32af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: e09e8bebc0fcd32bb8af1287a6b44816
@@ -1499,18 +1524,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 9fcea810d49ccf02f21553c9d0eb32af
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: a4fd57555ff56f29a1c797695658680a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
