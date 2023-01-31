@@ -594,7 +594,6 @@ MonoBehaviour:
   - {fileID: 4231989158514744161}
   - {fileID: 4231989157999670279}
   - {fileID: 4231989157999670276}
-  - {fileID: 5191486734065014873}
   - {fileID: 6756241000791540827}
   - {fileID: 604837713}
   _remoteLayerName: RemotePlayer
@@ -874,9 +873,9 @@ MonoBehaviour:
     damage: 5
     range: 100
     fireRate: 10
-    gfx: {fileID: 0}
+    gfx: {fileID: 1511013688837694325, guid: 0c6215f9d9bc6ea4e931055ba7b456be, type: 3}
   weaponLayerName: Weapon
-  weaponHolder: {fileID: 0}
+  weaponHolder: {fileID: 3728082460669391187}
 --- !u!1 &4231989159049653057
 GameObject:
   m_ObjectHideFlags: 0

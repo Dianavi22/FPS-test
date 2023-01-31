@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - PlayerSetUp
     - PlayerShoot
     - UnityStandardAssets.Effects.AfterburnerPhysicsForce
+    - WeaponGfx
     - WeaponManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
@@ -118,6 +119,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8408}
     - Class: 114
       Script: {instanceID: 24800}
+    - Class: 114
+      Script: {instanceID: 31366}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -1563,6 +1566,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WeaponManager
+  - hash:
+      serializedVersion: 2
+      Hash: fbd5fa7806257e09a1945ad1c89c8303
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponGfx
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

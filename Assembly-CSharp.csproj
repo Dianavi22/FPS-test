@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerSetUp.cs" />
     <Compile Include="Assets\WeaponManager.cs" />
+    <Compile Include="Assets\WeaponGfx.cs" />
+    <Compile Include="Assets\Scripts\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

@@ -38,17 +38,47 @@ public class PlayerShoot : NetworkBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 InvokeRepeating("Shoot", 0f, 1f / currentWeapon.fireRate);
-            }else if (Input.GetButtonUp("Fire1"))
+            }
+            else if (Input.GetButtonUp("Fire1"))
             {
                 CancelInvoke("Shoot");
             }
         }
 
     }
+    [Command]
+    void CmdOnHit(Vector3 pos, Vector3 normal)
+    {
+        RpcDoHitEffect(pos, normal);
+    }
+    [ClientRpc]
+    void RpcDoHitEffect(Vector3 pos, Vector3 normal)
+    {
+        GameObject  hitEffect = Instantiate(weaponManager.GetCurrentGfx().hitEffectPrefab, pos, Quaternion.LookRotation(normal));
+        Destroy(hitEffect, 2f);
+    }
+
+    //fct call on the server when the player shoot
+    [Command]
+    void CmbOnShoot()
+    {
+        RpcDoShootEffect();
+    }
+    //Display fire effects for all players
+    [ClientRpc]
+    void RpcDoShootEffect()
+    {
+        weaponManager.GetCurrentGfx().muzzleFlash.Play();
+    }
+
     [Client]
     private void Shoot()
     {
-        Debug.Log("Piou");
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        CmbOnShoot();
         RaycastHit hit;
 
         if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, currentWeapon.range, _mask))
@@ -57,6 +87,8 @@ public class PlayerShoot : NetworkBehaviour
             {
                 CmdPlayerShoot(hit.collider.name, currentWeapon.damage);
             }
+
+            CmdOnHit(hit.point, hit.normal);
         }
     }
     [Command]
