@@ -1,16 +1,11 @@
 using UnityEngine;
 using Mirror;
 
+[RequireComponent(typeof(WeaponManager))]
 public class PlayerShoot : NetworkBehaviour
 {
-    [SerializeField]
-    private PlayerWeapon weapon;
-
-    [SerializeField]
-    private GameObject _weaponGfx;
-
-    [SerializeField]
-    private string weaponLayerName = "Weapon";
+    private WeaponManager weaponManager;
+    private PlayerWeapon currentWeapon;
 
     [SerializeField]
     private Camera _cam;
@@ -20,30 +15,47 @@ public class PlayerShoot : NetworkBehaviour
 
     void Start()
     {
-        if(_cam == null)
+        if (_cam == null)
         {
             Debug.LogError("Penser à renseigner la caméra");
             this.enabled = false;
         }
-        _weaponGfx.layer = LayerMask.NameToLayer(weaponLayerName);
+        weaponManager = GetComponent<WeaponManager>();
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-        }
-    }
+        currentWeapon = weaponManager.GetCurrentWeapon();
 
+        if (currentWeapon.fireRate <= 0f)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                InvokeRepeating("Shoot", 0f, 1f / currentWeapon.fireRate);
+            }else if (Input.GetButtonUp("Fire1"))
+            {
+                CancelInvoke("Shoot");
+            }
+        }
+
+    }
+    [Client]
     private void Shoot()
     {
+        Debug.Log("Piou");
         RaycastHit hit;
 
-        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, weapon.range, _mask))
+        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, currentWeapon.range, _mask))
         {
-        if(hit.collider.tag == "Player")
+            if (hit.collider.tag == "Player")
             {
-                CmdPlayerShoot(hit.collider.name, weapon.damage);
+                CmdPlayerShoot(hit.collider.name, currentWeapon.damage);
             }
         }
     }
