@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
  private static Dictionary<string, Player> _players = new Dictionary<string, Player>();
     public MatchSettings matchSettings;
     public static GameManager instance;
+    [SerializeField] private GameObject sceneCamera;
+    private bool isActive;
     private void Awake()
     {
         if(instance == null)
@@ -21,6 +23,12 @@ public class GameManager : MonoBehaviour
         string playerId = _playerIdPrefix + netID;
         _players.Add(playerId, player);
         player.transform.name = playerId;
+    }
+
+    public void SetSceneCameraActive(bool isActive)
+    {
+        if (sceneCamera == null) return;
+        sceneCamera.SetActive(isActive);
     }
 
     public static void UnregisterPlayer(string playerId)

@@ -491,10 +491,15 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0.1
+  deathEffect: {fileID: 1826211833945398591, guid: 2bc19da9556cef5418bf67edc247b0fe, type: 3}
+  spawnEffect: {fileID: 4829977385571824507, guid: 5bcb684a099d8a84cbfa1189e46443b8, type: 3}
   _maxHealth: 100
   _disableOnDeath:
   - {fileID: 5191486734065014873}
   - {fileID: 4231989158514744166}
+  _disableGameObjectOnDeath:
+  - {fileID: 4231989158429865545}
+  - {fileID: 4231989157999670282}
 --- !u!135 &4231989158514744164
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -601,6 +606,7 @@ MonoBehaviour:
   _dontDrawLayerName: DontDraw
   _playerGraphics: {fileID: 4231989158429865545}
   _playerUIPrefab: {fileID: 4994470225584483808, guid: 43a2164d144dd37408f3d3f87839cb10, type: 3}
+  _playerUIInstance: {fileID: 0}
 --- !u!136 &7784694054190485601
 CapsuleCollider:
   m_ObjectHideFlags: 0

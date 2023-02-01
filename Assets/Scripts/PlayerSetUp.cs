@@ -15,9 +15,11 @@ public class PlayerSetUp : NetworkBehaviour
     [SerializeField] private GameObject _playerGraphics;
 
     [SerializeField] private GameObject _playerUIPrefab;
-    private GameObject _playerUIInstance;
+    
+    [HideInInspector]
+    public GameObject _playerUIInstance;
 
-    Camera sceneCamera;
+    
     private void Start()
     {
         if (!isLocalPlayer)
@@ -27,11 +29,8 @@ public class PlayerSetUp : NetworkBehaviour
         }
         else
         {
-            sceneCamera = Camera.main;
-            if (sceneCamera != null)
-            {
-                sceneCamera.gameObject.SetActive(false);
-            }
+          
+
 
             //désactiver la partie graphique du joueur local
             Util.SetLayerRecurcively(_playerGraphics, LayerMask.NameToLayer(_dontDrawLayerName));
@@ -87,12 +86,7 @@ public class PlayerSetUp : NetworkBehaviour
     private void OnDisable()
     {
         Destroy(_playerUIInstance);
-
-        if (sceneCamera != null)
-        {
-            sceneCamera.gameObject.SetActive(true);
-        }
-
+        GameManager.instance.SetSceneCameraActive(true);
         GameManager.UnregisterPlayer(transform.name);
 
     }
