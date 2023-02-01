@@ -1,6 +1,8 @@
 using Mirror;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
+[RequireComponent(typeof(PlayerController))]
 public class PlayerSetUp : NetworkBehaviour
 {
     [SerializeField]
@@ -31,12 +33,22 @@ public class PlayerSetUp : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
 
-            //désactiver la partie graphique du joueur locaal
+            //désactiver la partie graphique du joueur local
             Util.SetLayerRecurcively(_playerGraphics, LayerMask.NameToLayer(_dontDrawLayerName));
 
             //création du UI du joueur local
             _playerUIInstance = Instantiate(_playerUIPrefab);
 
+            //configuration UI
+            PlayerUI ui = _playerUIInstance.GetComponent<PlayerUI>();
+            if(ui == null)
+            {
+                Debug.LogError("missing component PlayerUI on PlayerUIInstance");
+            }
+            else
+            {
+                ui.SetController(GetComponent<PlayerController>());
+            }
         }
         GetComponent<Player>().SetUp();
 

@@ -15,7 +15,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _thrusterForce = 1000f;
 
+    [SerializeField] private float thrusterFuelBurnSpeed = 1f;
+    [SerializeField] private float thrusterFuelRegenSpeed = 0.3f;
+    private float thrusterFuelAmount = 1f;
+
     private Animator _animator;
+
+    public float GetThrusterFuelAmount()
+    {
+        return thrusterFuelAmount;
+    }
 
     [Header("Joint Options")]
     [SerializeField] private float _jointSpring = 20f;
@@ -33,9 +42,20 @@ public class PlayerController : MonoBehaviour
 
 
 
-     }
+    }
     private void Update()
     {
+
+        RaycastHit _hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out _hit, 100f))
+        {
+            _joint.targetPosition = new Vector3(0f, -_hit.point.y, 0f);
+        }
+        else
+        {
+            _joint.targetPosition = new Vector3(0f, 0f, 0f);
+
+        }
         // Calculer la velocité du mouvement du joueur
         float xMov = Input.GetAxis("Horizontal");
         float zMov = Input.GetAxis("Vertical");
@@ -63,28 +83,36 @@ public class PlayerController : MonoBehaviour
 
         Vector3 _thrusterVelocity = Vector3.zero;
         // Applique force JetPack
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && thrusterFuelAmount > 0)
         {
-            _thrusterVelocity = Vector3.up * _thrusterForce;
-            SetJoinSettings(0f);
+            thrusterFuelAmount -= thrusterFuelBurnSpeed * Time.deltaTime;
+            if (thrusterFuelAmount >= 0.01f)
+            {
+                _thrusterVelocity = Vector3.up * _thrusterForce;
+                SetJoinSettings(0f);
+            }
+
         }
         else
         {
+            thrusterFuelAmount += thrusterFuelRegenSpeed * Time.deltaTime;
             SetJoinSettings(_jointSpring);
         }
 
+        thrusterFuelAmount = Mathf.Clamp(thrusterFuelAmount, 0f, 1f);
+
         _motor.ApplyThruster(_thrusterVelocity);
-           
-        
+
+
 
         // Rotation de la caméra
-    
+
     }
 
     private void SetJoinSettings(float jointSpring)
     {
         _joint.yDrive = new JointDrive { positionSpring = jointSpring, maximumForce = _jointMaxForce };
-    } 
+    }
 
 
 }
