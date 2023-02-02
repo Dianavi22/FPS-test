@@ -90,18 +90,18 @@ public class PlayerShoot : NetworkBehaviour
         {
             if (hit.collider.tag == "Player")
             {
-                CmdPlayerShoot(hit.collider.name, currentWeapon.damage);
+                CmdPlayerShoot(hit.collider.name, currentWeapon.damage, transform.name);
             }
 
             CmdOnHit(hit.point, hit.normal);
         }
     }
     [Command]
-    private void CmdPlayerShoot(string playerId, float damage)
+    private void CmdPlayerShoot(string playerId, float damage, string sourceID)
     {
         Debug.Log(playerId + " a été touché");
 
         Player player = GameManager.GetPlayer(playerId);
-        player.RpcTakeDamage(damage);
+        player.RpcTakeDamage(damage, sourceID);
     }
 }

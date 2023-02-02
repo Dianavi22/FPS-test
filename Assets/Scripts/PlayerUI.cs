@@ -5,6 +5,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private RectTransform thrusterFuelFill;
     private PlayerController controller;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject scoreBoard;
 
     public void SetController(PlayerController _controller)
     {
@@ -17,6 +18,13 @@ public class PlayerUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            scoreBoard.SetActive(true);
+        }else if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            scoreBoard.SetActive(false);
         }
     }
 

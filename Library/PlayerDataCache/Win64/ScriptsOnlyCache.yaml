@@ -6,9 +6,11 @@ ScriptsOnlyBuild:
     - Player
     - PlayerController
     - PlayerMotor
+    - PlayerScoreboardItem
     - PlayerSetUp
     - PlayerShoot
     - PlayerUI
+    - Scoreboard
     - UnityStandardAssets.Effects.ExplosionPhysicsForce
     - UnityStandardAssets.Effects.ParticleSystemMultiplier
     - WeaponGfx
@@ -36,7 +38,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
     - MatchSettings
@@ -45,6 +49,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.RectOffset
     UnityEngine.UI:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
@@ -57,6 +62,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: LeaveRoomButton
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerUI
+    methodName: TogglePauseMenu
   sceneClasses:
     Assets/Scenes/Lobby.unity:
     - Class: 1
@@ -96,6 +104,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1532}
     - Class: 114
+      Script: {instanceID: 1728}
+    - Class: 114
       Script: {instanceID: 2628}
     - Class: 114
       Script: {instanceID: 2736}
@@ -126,6 +136,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6846}
     - Class: 114
+      Script: {instanceID: 7320}
+    - Class: 114
       Script: {instanceID: 7894}
     - Class: 114
       Script: {instanceID: 7954}
@@ -139,6 +151,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8420}
     - Class: 114
       Script: {instanceID: 31378}
+    - Class: 114
+      Script: {instanceID: 41136}
+    - Class: 114
+      Script: {instanceID: 41568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1045,7 +1061,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: 775e9bd1fc809366d19c6afd2d03edf3
+      Hash: 05657a0dbae8cfd0d115318555b28ee6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1111,7 +1127,7 @@ ScriptsOnlyBuild:
     className: ShootingTankBehaviour
   - hash:
       serializedVersion: 2
-      Hash: f1c2f0dbda6252b7b7e61e745053c749
+      Hash: e227bb2e9ff878daf37d42ab991d924c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerUI
@@ -1661,6 +1677,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 3b68007be98f3a76e6a47cfa7fc76095
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scoreboard
+  - hash:
+      serializedVersion: 2
+      Hash: 791ddd6b6a643b34e280f3ad2fbc2977
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerScoreboardItem
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity

@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\WeaponGfx.cs" />
     <Compile Include="Assets\Scripts\PlayerSetUp.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Scoreboard.cs" />
+    <Compile Include="Assets\Scripts\PlayerScoreboardItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

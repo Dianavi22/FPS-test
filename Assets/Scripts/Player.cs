@@ -25,6 +25,13 @@ public class Player : NetworkBehaviour
     [Header("Enable or Not")]
     [SerializeField] private Behaviour[] _disableOnDeath;
     [SerializeField] private GameObject[] _disableGameObjectOnDeath;
+
+    [Header("ScoreBoard")]
+    public int kills;
+    public int deaths;
+
+
+
     private bool[] _wasEnableOnStart;
 
     private bool firstSetup = true;
@@ -112,12 +119,12 @@ public class Player : NetworkBehaviour
         if (!isLocalPlayer) return;
         if (Input.GetKeyDown(KeyCode.H))
         {
-            RpcTakeDamage(50);
+            RpcTakeDamage(50, "Joueur");
         }
     }
 
     [ClientRpc]
-    public void RpcTakeDamage(float amount)
+    public void RpcTakeDamage(float amount, string sourceID)
     {
         if (_isDead)
         {
@@ -126,13 +133,20 @@ public class Player : NetworkBehaviour
         _currentHealth -= amount;
         if (_currentHealth <= 0)
         {
-            Die();
+            Die(sourceID);
         }
     }
 
-    private void Die()
+    private void Die(string sourceID)
     {
         _isDead = true;
+
+        //Récupérer le joueur qui a effectué le tire
+        Player sourceePlayer = GameManager.GetPlayer(sourceID);
+        if (sourceePlayer != null) sourceePlayer.kills++;
+
+        deaths++;
+
         for (int i = 0; i < _disableOnDeath.Length; i++)
         {
             _disableOnDeath[i].enabled = false;
