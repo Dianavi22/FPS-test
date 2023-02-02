@@ -352,7 +352,6 @@
 "Assets/ParticleSystems/Scripts/AfterburnerPhysicsForce.cs"
 "Assets/ParticleSystems/Scripts/ExplosionPhysicsForce.cs"
 "Assets/ParticleSystems/Scripts/ParticleSystemMultiplier.cs"
-"Assets/PlayerUI.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MatchSettings.cs"
 "Assets/Scripts/Player.cs"
@@ -360,10 +359,11 @@
 "Assets/Scripts/PlayerMotor.cs"
 "Assets/Scripts/PlayerSetUp.cs"
 "Assets/Scripts/PlayerShoot.cs"
+"Assets/Scripts/PlayerUI.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 "Assets/Scripts/Util.cs"
-"Assets/WeaponGfx.cs"
-"Assets/WeaponManager.cs"
+"Assets/Scripts/WeaponGfx.cs"
+"Assets/Scripts/WeaponManager.cs"
 -langversion:9.0
 
 /deterministic

@@ -29,9 +29,6 @@ public class PlayerSetUp : NetworkBehaviour
         }
         else
         {
-          
-
-
             //désactiver la partie graphique du joueur local
             Util.SetLayerRecurcively(_playerGraphics, LayerMask.NameToLayer(_dontDrawLayerName));
 
@@ -40,16 +37,17 @@ public class PlayerSetUp : NetworkBehaviour
 
             //configuration UI
             PlayerUI ui = _playerUIInstance.GetComponent<PlayerUI>();
-            if(ui == null)
+            if(ui == null) 
             {
                 Debug.LogError("missing component PlayerUI on PlayerUIInstance");
             }
             else
             {
                 ui.SetController(GetComponent<PlayerController>());
-            }
+            } 
+            GetComponent<Player>().SetUp();
         }
-        GetComponent<Player>().SetUp();
+       
 
     }
 
@@ -86,7 +84,9 @@ public class PlayerSetUp : NetworkBehaviour
     private void OnDisable()
     {
         Destroy(_playerUIInstance);
-        GameManager.instance.SetSceneCameraActive(true);
+
+        if (isLocalPlayer) GameManager.instance.SetSceneCameraActive(true);
+        
         GameManager.UnregisterPlayer(transform.name);
 
     }

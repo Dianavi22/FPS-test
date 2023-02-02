@@ -88,47 +88,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1532}
     - Class: 114
-      Script: {instanceID: 2734}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 4764}
+      Script: {instanceID: 3408}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 5316}
+      Script: {instanceID: 4768}
     - Class: 114
-      Script: {instanceID: 5406}
+      Script: {instanceID: 4894}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5970}
+      Script: {instanceID: 5410}
     - Class: 114
-      Script: {instanceID: 6284}
+      Script: {instanceID: 5694}
     - Class: 114
-      Script: {instanceID: 6498}
+      Script: {instanceID: 5974}
     - Class: 114
-      Script: {instanceID: 6824}
+      Script: {instanceID: 6034}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6290}
     - Class: 114
-      Script: {instanceID: 7888}
+      Script: {instanceID: 6504}
     - Class: 114
-      Script: {instanceID: 7948}
+      Script: {instanceID: 6830}
     - Class: 114
-      Script: {instanceID: 8074}
+      Script: {instanceID: 6846}
     - Class: 114
-      Script: {instanceID: 8266}
+      Script: {instanceID: 7894}
     - Class: 114
-      Script: {instanceID: 8302}
+      Script: {instanceID: 7954}
     - Class: 114
-      Script: {instanceID: 8414}
+      Script: {instanceID: 8080}
     - Class: 114
-      Script: {instanceID: 25002}
+      Script: {instanceID: 8272}
     - Class: 114
-      Script: {instanceID: 27172}
+      Script: {instanceID: 8308}
     - Class: 114
-      Script: {instanceID: 27174}
+      Script: {instanceID: 8420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -344,6 +344,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0faadf7f444e033f28a19470d1ae257b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityStandardAssets.Effects
+    className: ExplosionPhysicsForce
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -608,6 +614,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Flow.dll
     namespaceName: Unity.VisualScripting
     className: ScriptGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 3748fbad2d474a315bda516b8363a0c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityStandardAssets.Effects
+    className: ParticleSystemMultiplier
   - hash:
       serializedVersion: 2
       Hash: e45a733ac31e080bd406e5dc6a8c314e
@@ -976,7 +988,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: d3f5cfeb11a4fedf80ed0d839f9a386d
+      Hash: 775e9bd1fc809366d19c6afd2d03edf3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1040,6 +1052,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.AdditiveScenes
     className: ShootingTankBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: d42cb59b8775406d2243b7d6184f7773
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerUI
   - hash:
       serializedVersion: 2
       Hash: 19979dcd2d56dc5da71c441ddd5e73a0
@@ -1168,7 +1186,7 @@ ScriptsOnlyBuild:
     className: NetworkManagerPong
   - hash:
       serializedVersion: 2
-      Hash: 9fcea810d49ccf02f21553c9d0eb32af
+      Hash: 7126c8fc01f0332d7f60c82d996c924a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1504,7 +1522,7 @@ ScriptsOnlyBuild:
     className: BasicNetManager
   - hash:
       serializedVersion: 2
-      Hash: 84269a3112d6ba4f5168411d6404d4fc
+      Hash: 41467c1763a81ff6dcdedbc2b644a4ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSetUp
@@ -1580,24 +1598,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: d42cb59b8775406d2243b7d6184f7773
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerUI
-  - hash:
-      serializedVersion: 2
-      Hash: 3748fbad2d474a315bda516b8363a0c5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.Effects
-    className: ParticleSystemMultiplier
-  - hash:
-      serializedVersion: 2
-      Hash: 0faadf7f444e033f28a19470d1ae257b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.Effects
-    className: ExplosionPhysicsForce
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

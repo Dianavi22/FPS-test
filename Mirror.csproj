@@ -114,8 +114,8 @@
     <Compile Include="Assets\Mirror\Core\Empty\NetworkTransformBase.cs" />
     <Compile Include="Assets\Mirror\Core\NetworkWriter.cs" />
     <Compile Include="Assets\Mirror\Core\InterestManagement.cs" />
-    <Compile Include="Assets\Mirror\Core\Empty\Cloud\InstantiateNetworkManager.cs" />
     <Compile Include="Assets\Mirror\Core\NetworkReader.cs" />
+    <Compile Include="Assets\Mirror\Core\Empty\Cloud\InstantiateNetworkManager.cs" />
     <Compile Include="Assets\Mirror\Core\Tools\Extensions.cs" />
     <Compile Include="Assets\Mirror\Core\Tools\Utils.cs" />
     <Compile Include="Assets\Mirror\Core\Empty\NetworkOwnerChecker.cs" />
