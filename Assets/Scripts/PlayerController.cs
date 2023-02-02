@@ -45,7 +45,26 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        if (Cursor.lockState != CursorLockMode.None)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
+        if (PauseMenu.isOn)
+        {
+            _motor.Move(Vector3.zero);
+            _motor.Rotate(Vector3.zero);
+            _motor.RotateCamera(0f);
+            _motor.ApplyThruster(Vector3.zero);
+            return;
+        }
+
+        if(Cursor.lockState != CursorLockMode.Locked)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         RaycastHit _hit;
         if (Physics.Raycast(transform.position, Vector3.down, out _hit, 100f))
         {

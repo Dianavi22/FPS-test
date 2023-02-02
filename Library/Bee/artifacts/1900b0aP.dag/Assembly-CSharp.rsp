@@ -354,6 +354,7 @@
 "Assets/ParticleSystems/Scripts/ParticleSystemMultiplier.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MatchSettings.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerMotor.cs"
