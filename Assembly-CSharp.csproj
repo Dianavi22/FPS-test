@@ -76,6 +76,8 @@
     <Compile Include="Assets\Scripts\PlayerSetUp.cs" />
     <Compile Include="Assets\Killfeed.cs" />
     <Compile Include="Assets\KillfeedItem.cs" />
+    <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

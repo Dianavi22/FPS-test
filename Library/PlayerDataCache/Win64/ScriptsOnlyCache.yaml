@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - GameManager
     - Killfeed
     - KillfeedItem
+    - MainMenu
     - PauseMenu
     - Player
     - PlayerController
@@ -13,6 +14,7 @@ ScriptsOnlyBuild:
     - PlayerShoot
     - PlayerUI
     - Scoreboard
+    - SettingsMenu
     - UnityStandardAssets.Effects.ExplosionPhysicsForce
     - UnityStandardAssets.Effects.ParticleSystemMultiplier
     - WeaponGfx
@@ -38,10 +40,15 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
@@ -56,17 +63,38 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.Dropdown/DropdownEvent
+    - UnityEngine.UI.Dropdown/OptionData
+    - UnityEngine.UI.Dropdown/OptionDataList
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: CloseSettingsWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetFullScreen
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetResolution
   - assembly: Assembly-CSharp
     fullTypeName: PlayerUI
     methodName: TogglePauseMenu
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: LeaveRoomButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: QuitButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: SettingsButton
   sceneClasses:
     Assets/Scenes/Lobby.unity:
     - Class: 1
@@ -108,6 +136,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1534}
     - Class: 114
+      Script: {instanceID: 1536}
+    - Class: 114
       Script: {instanceID: 1730}
     - Class: 114
       Script: {instanceID: 2614}
@@ -121,6 +151,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3412}
     - Class: 114
       Script: {instanceID: 4042}
+    - Class: 114
+      Script: {instanceID: 4218}
     - Class: 114
       Script: {instanceID: 4772}
     - Class: 114
@@ -142,13 +174,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6850}
     - Class: 114
+      Script: {instanceID: 6862}
+    - Class: 114
       Script: {instanceID: 6884}
     - Class: 114
       Script: {instanceID: 7326}
     - Class: 114
+      Script: {instanceID: 7744}
+    - Class: 114
       Script: {instanceID: 7900}
     - Class: 114
       Script: {instanceID: 7960}
+    - Class: 114
+      Script: {instanceID: 8078}
     - Class: 114
       Script: {instanceID: 8086}
     - Class: 114
@@ -161,6 +199,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8578}
     - Class: 114
       Script: {instanceID: 25086}
+    - Class: 114
+      Script: {instanceID: 29196}
+    - Class: 114
+      Script: {instanceID: 29202}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1707,6 +1749,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KillfeedItem
+  - hash:
+      serializedVersion: 2
+      Hash: dcc6b3c76a3d5b0719bde7961efd6d8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 582ffce33876f037392679a1b8274d1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity
