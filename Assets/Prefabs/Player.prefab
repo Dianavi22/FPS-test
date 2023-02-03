@@ -494,12 +494,15 @@ MonoBehaviour:
   deathEffect: {fileID: 1826211833945398591, guid: 2bc19da9556cef5418bf67edc247b0fe, type: 3}
   spawnEffect: {fileID: 4829977385571824507, guid: 5bcb684a099d8a84cbfa1189e46443b8, type: 3}
   _maxHealth: 100
+  _currentHealth: 0
   _disableOnDeath:
   - {fileID: 5191486734065014873}
   - {fileID: 4231989158514744166}
   _disableGameObjectOnDeath:
   - {fileID: 4231989158429865545}
   - {fileID: 4231989157999670282}
+  kills: 0
+  deaths: 0
 --- !u!135 &4231989158514744164
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -875,12 +878,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0.1
-  primaryWeapon:
-    name: Fusil semi-automatique
-    damage: 3
-    range: 100
-    fireRate: 10
-    gfx: {fileID: 1511013688837694325, guid: 0c6215f9d9bc6ea4e931055ba7b456be, type: 3}
+  primaryWeapon: {fileID: 11400000, guid: c35a84faf02c6a543891350bcb617cd0, type: 2}
   weaponLayerName: Weapon
   weaponHolder: {fileID: 3728082460669391187}
 --- !u!1 &4424396828456509651

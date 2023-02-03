@@ -1,6 +1,7 @@
 using UnityEngine;
-[System.Serializable]
-public class PlayerWeapon 
+
+[CreateAssetMenu(fileName = "WeaponData", menuName = "My Game/Weapon Data")]
+public class WeaponData : ScriptableObject
 {
     public string name = "Fusil semi-automatique";
     public float damage = 10;

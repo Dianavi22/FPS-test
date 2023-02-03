@@ -5,8 +5,8 @@ using Mirror;
 public class WeaponManager : NetworkBehaviour
 {
 
-    [SerializeField] private PlayerWeapon primaryWeapon;
-    private PlayerWeapon currentWeapon;
+    [SerializeField] private WeaponData primaryWeapon;
+    private WeaponData currentWeapon;
     private WeaponGfx currentGfx;
     [SerializeField]
     private string weaponLayerName = "Weapon";
@@ -15,7 +15,7 @@ public class WeaponManager : NetworkBehaviour
     {
         EquipWeapon(primaryWeapon); 
     }
-    public PlayerWeapon GetCurrentWeapon()
+    public WeaponData GetCurrentWeapon()
     {
         return currentWeapon;
     }
@@ -23,7 +23,7 @@ public class WeaponManager : NetworkBehaviour
     {
         return currentGfx;
     }
-    void EquipWeapon(PlayerWeapon _weapon)
+    void EquipWeapon(WeaponData _weapon)
     {
         currentWeapon = _weapon;
 
