@@ -90,6 +90,18 @@ ScriptsOnlyBuild:
     fullTypeName: PauseMenu
     methodName: LeaveRoomButton
   - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: SettingsButton
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetResolution
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: CloseSettingsWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetFullScreen
+  - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: QuitButton
   - assembly: Assembly-CSharp
@@ -1349,7 +1361,7 @@ ScriptsOnlyBuild:
     className: CellGUI
   - hash:
       serializedVersion: 2
-      Hash: 5085c149ae898c11398927898b806b9c
+      Hash: 021119874510b0849eaabb06b56d729e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
@@ -1751,7 +1763,7 @@ ScriptsOnlyBuild:
     className: KillfeedItem
   - hash:
       serializedVersion: 2
-      Hash: dcc6b3c76a3d5b0719bde7961efd6d8f
+      Hash: 0aeec93b29b0aa84e8456c5f0bc39e5c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SettingsMenu

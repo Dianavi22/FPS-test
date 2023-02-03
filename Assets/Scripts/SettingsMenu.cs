@@ -9,7 +9,7 @@ public class SettingsMenu : MonoBehaviour
 {
     Resolution[] resolutions;
     [SerializeField] Dropdown resolutionDropDown;
-    [SerializeField] GameObject closeButton;
+    [SerializeField] GameObject settingsWindow;
 
     public void Start()
     {
@@ -38,17 +38,17 @@ public class SettingsMenu : MonoBehaviour
     {
         
             Screen.fullScreen = isFullScreen;
-            print("IS FULL SCREEN");
           
     }
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-        print("RESOLUTION CHANGED");
     }
-    public void CloseSettingsMenu()
+  
+
+    public void CloseSettingsWindow()
     {
-        closeButton.SetActive(false);
+        settingsWindow.SetActive(false);
     }
 }

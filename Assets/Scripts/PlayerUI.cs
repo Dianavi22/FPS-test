@@ -7,6 +7,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject scoreBoard;
 
+
+
     public void SetController(PlayerController _controller)
     {
         controller = _controller;
@@ -38,6 +40,8 @@ public class PlayerUI : MonoBehaviour
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         PauseMenu.isOn = pauseMenu.activeSelf;
     }
+
+    
 
     void SetFuelAmount(float _amount)
     {

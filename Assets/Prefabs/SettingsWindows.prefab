@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 4710115744666592819}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170.4, y: 95.246}
-  m_SizeDelta: {x: 36.9546, y: 33.0911}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -21.1, y: -27.1}
+  m_SizeDelta: {x: 36.954605, y: 33.091095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2958263061166536524
 CanvasRenderer:
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 287762413}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: CloseSettingsWindow
         m_Mode: 1
         m_Arguments:
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -155007541, guid: 5003bee52560e074c861c07673565854, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropDown: {fileID: 1712976005791238084}
-  closeButton: {fileID: 545477129253582718}
+  settingsWindow: {fileID: 7216078082001100318}
 --- !u!1 &7684906752455628048
 GameObject:
   m_ObjectHideFlags: 0
