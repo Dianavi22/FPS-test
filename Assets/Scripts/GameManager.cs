@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private GameObject sceneCamera;
     private bool isActive;
+
+    public delegate void OnPlayerKilledCallback(string player, string source);
+    public OnPlayerKilledCallback onPlayerKilledCallback;
     private void Awake()
     {
         if(instance == null)

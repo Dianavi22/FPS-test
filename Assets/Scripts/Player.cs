@@ -142,8 +142,13 @@ public class Player : NetworkBehaviour
         _isDead = true;
 
         //Récupérer le joueur qui a effectué le tire
-        Player sourceePlayer = GameManager.GetPlayer(sourceID);
-        if (sourceePlayer != null) sourceePlayer.kills++;
+        Player sourcePlayer = GameManager.GetPlayer(sourceID);
+        if (sourcePlayer != null)
+        {
+            sourcePlayer.kills++;
+            GameManager.instance.onPlayerKilledCallback.Invoke(transform.name, sourcePlayer.name);
+
+        }
 
         deaths++;
 
