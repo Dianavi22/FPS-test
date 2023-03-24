@@ -15,5 +15,7 @@ MonoBehaviour:
   name: Pistole
   damage: 10
   range: 100
+  magazineSize: 10
+  reloadTime: 1
   fireRate: 0
   gfx: {fileID: 4879258321422054469, guid: 899a2f593c95d7b4a83207cb8dbfa8c5, type: 3}

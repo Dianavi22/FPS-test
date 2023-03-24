@@ -15,5 +15,7 @@ MonoBehaviour:
   name: Fusil semi-automatique
   damage: 3
   range: 100
+  magazineSize: 100
+  reloadTime: 2
   fireRate: 15
   gfx: {fileID: 1511013688837694325, guid: 0c6215f9d9bc6ea4e931055ba7b456be, type: 3}

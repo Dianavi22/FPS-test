@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - SettingsMenu
     - UnityStandardAssets.Effects.ExplosionPhysicsForce
     - UnityStandardAssets.Effects.ParticleSystemMultiplier
+    - WeaponData
     - WeaponGfx
     - WeaponManager
     Mirror.Components.dll:
@@ -53,7 +54,6 @@ ScriptsOnlyBuild:
   serializedClasses:
     Assembly-CSharp:
     - MatchSettings
-    - PlayerWeapon
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -84,14 +84,14 @@ ScriptsOnlyBuild:
     fullTypeName: SettingsMenu
     methodName: SetResolution
   - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: SettingsButton
+  - assembly: Assembly-CSharp
     fullTypeName: PlayerUI
     methodName: TogglePauseMenu
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: LeaveRoomButton
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: SettingsButton
   - assembly: Assembly-CSharp
     fullTypeName: SettingsMenu
     methodName: SetResolution
@@ -148,73 +148,75 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1534}
     - Class: 114
-      Script: {instanceID: 1536}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1730}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2632}
+      Script: {instanceID: 2738}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 3126}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 4042}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 4218}
+      Script: {instanceID: 4216}
+    - Class: 114
+      Script: {instanceID: 4244}
     - Class: 114
       Script: {instanceID: 4772}
     - Class: 114
       Script: {instanceID: 4898}
     - Class: 114
-      Script: {instanceID: 5324}
+      Script: {instanceID: 5274}
     - Class: 114
-      Script: {instanceID: 5414}
+      Script: {instanceID: 5326}
     - Class: 114
-      Script: {instanceID: 5676}
+      Script: {instanceID: 5404}
     - Class: 114
-      Script: {instanceID: 5700}
+      Script: {instanceID: 5418}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 6038}
+      Script: {instanceID: 5704}
     - Class: 114
-      Script: {instanceID: 6294}
+      Script: {instanceID: 5936}
     - Class: 114
-      Script: {instanceID: 6850}
+      Script: {instanceID: 5984}
     - Class: 114
-      Script: {instanceID: 6862}
+      Script: {instanceID: 6044}
     - Class: 114
-      Script: {instanceID: 6884}
+      Script: {instanceID: 6300}
     - Class: 114
-      Script: {instanceID: 7326}
+      Script: {instanceID: 6856}
     - Class: 114
-      Script: {instanceID: 7744}
+      Script: {instanceID: 6868}
     - Class: 114
-      Script: {instanceID: 7900}
+      Script: {instanceID: 6890}
     - Class: 114
-      Script: {instanceID: 7960}
+      Script: {instanceID: 7332}
     - Class: 114
-      Script: {instanceID: 8078}
+      Script: {instanceID: 7750}
     - Class: 114
-      Script: {instanceID: 8086}
+      Script: {instanceID: 7906}
     - Class: 114
-      Script: {instanceID: 8278}
+      Script: {instanceID: 7966}
     - Class: 114
-      Script: {instanceID: 8314}
+      Script: {instanceID: 8084}
     - Class: 114
-      Script: {instanceID: 8426}
+      Script: {instanceID: 8092}
     - Class: 114
-      Script: {instanceID: 8578}
+      Script: {instanceID: 8284}
     - Class: 114
-      Script: {instanceID: 25086}
+      Script: {instanceID: 8320}
     - Class: 114
-      Script: {instanceID: 29196}
+      Script: {instanceID: 8432}
     - Class: 114
-      Script: {instanceID: 29202}
+      Script: {instanceID: 8584}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -275,13 +277,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2738}
     - Class: 114
-      Script: {instanceID: 6508}
+      Script: {instanceID: 6514}
     - Class: 114
-      Script: {instanceID: 6834}
+      Script: {instanceID: 6840}
     - Class: 114
-      Script: {instanceID: 6850}
+      Script: {instanceID: 6856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -291,6 +293,12 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -303,18 +311,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: bcaee4c2a83047257b5f47d6ed264b75
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -587,6 +583,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 001f34258d80711dc8ea30f87216de7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponData
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -809,6 +811,12 @@ ScriptsOnlyBuild:
     className: MonsterMovement
   - hash:
       serializedVersion: 2
+      Hash: 4ce15e99c635d2567873d27549d1f16f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KillfeedItem
+  - hash:
+      serializedVersion: 2
       Hash: 306f6c6830d6725abf0598650905dcd4
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1019,6 +1027,12 @@ ScriptsOnlyBuild:
     className: RandomColor
   - hash:
       serializedVersion: 2
+      Hash: 582ffce33876f037392679a1b8274d1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1065,6 +1079,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 0aeec93b29b0aa84e8456c5f0bc39e5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenu
   - hash:
       serializedVersion: 2
       Hash: 69501abcda51721514ce989f617b052f
@@ -1185,6 +1205,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.CCU
     className: Player
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 0aed2256395f03abeb3c1407701489bd
@@ -1553,7 +1579,7 @@ ScriptsOnlyBuild:
     className: PlayerScore
   - hash:
       serializedVersion: 2
-      Hash: 826e9928d68865af98ebb73b5082afc3
+      Hash: 7e710bd735c6f468b70b36880a06595d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WeaponManager
@@ -1755,24 +1781,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 4ce15e99c635d2567873d27549d1f16f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KillfeedItem
-  - hash:
-      serializedVersion: 2
-      Hash: 0aeec93b29b0aa84e8456c5f0bc39e5c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SettingsMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 582ffce33876f037392679a1b8274d1e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lobby.unity

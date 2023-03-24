@@ -24,12 +24,18 @@ public class PlayerShoot : NetworkBehaviour
     }
     private void Update()
     {
+        currentWeapon = weaponManager.GetCurrentWeapon();
 
         if (PauseMenu.isOn)
         {
             return;
         }
-        currentWeapon = weaponManager.GetCurrentWeapon();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(weaponManager.Reload());
+            Debug.Log("Rechargé " + weaponManager.currentMagazineSize);
+            return;
+        }
 
         if (currentWeapon.fireRate <= 0f)
         {
@@ -79,10 +85,18 @@ public class PlayerShoot : NetworkBehaviour
     [Client]
     private void Shoot()
     {
-        if (!isLocalPlayer)
+        if (!isLocalPlayer || weaponManager.isReloading)
         {
             return;
         }
+
+        if (weaponManager.currentMagazineSize <= 0)
+        {
+            weaponManager.Reload();
+            return;
+        }
+        weaponManager.currentMagazineSize--;
+
         CmbOnShoot();
         RaycastHit hit;
 

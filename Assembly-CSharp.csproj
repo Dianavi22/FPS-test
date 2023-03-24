@@ -62,7 +62,10 @@
     <Compile Include="Assets\Scripts\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Util.cs" />
     <Compile Include="Assets\Imports\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
+    <Compile Include="Assets\Scripts\KillfeedItem.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerScoreboardItem.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -75,9 +78,6 @@
     <Compile Include="Assets\Scripts\WeaponGfx.cs" />
     <Compile Include="Assets\Scripts\PlayerSetUp.cs" />
     <Compile Include="Assets\Scripts\Killfeed.cs" />
-    <Compile Include="Assets\Scripts\KillfeedItem.cs" />
-    <Compile Include="Assets\Scripts\SettingsMenu.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
